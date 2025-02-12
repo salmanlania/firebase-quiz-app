@@ -21,15 +21,16 @@ const loginHandler = async () => {
                     toast: true,
                     position: "top-end",
                     icon: "success",
-                    title: "you have been signup successfully",
+                    title: "You've been Sign Up Successfully",
                     showConfirmButton: false,
                     timer: 1500
                 });
                 email.value = ""
                 password.value = ""
+                window.location.replace('./admin/dasboard/dasboard.html')
             }
         } catch (e) {
-            console.log('e', e.code)
+            console.log(e.code)
             Swal.fire({
                 toast: true,
                 position: "top-end",
